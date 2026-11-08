@@ -1,7 +1,7 @@
 /* Intro: Turn On Lights → Play Music → Let's Decorate → Fly With Balloons → Open Surprise
    After the last button the original Shinchan experience (midnight countdown → passcode → gifts) starts. */
 // ═══════ SETTINGS (yahan badlo) ═══════
-const BALLOON_NAME = 'BESTIE';   // naam jo balloons banayenge; do words ho to do rows, jaise 'ANYA SHARMA'
+const BALLOON_NAME = 'ANSHIKA';   // naam jo balloons banayenge; do words ho to do rows, jaise 'ANYA SHARMA'
 const MASS_BALLOONS = 36;        // ek saath udne wale balloons ki ginti
 // ═══════════════════════════════════════
 
