@@ -1,0 +1,98 @@
+/* ───────── INTRO STAGE (lights → music → decorate → balloons) ───────── */
+#intro-stage {
+  position: fixed; inset: 0; z-index: 500; overflow: hidden; overflow: clip;
+  background: #000;
+  transition: background-color 3s linear, opacity 1.2s ease;
+  font-family: 'Fredoka', 'Poppins', sans-serif;
+}
+#intro-stage.lit { background-color: #ffdab9; }
+#intro-stage.music { animation: introPeach 8s linear infinite; }
+#intro-stage.leaving { opacity: 0; pointer-events: none; }
+@keyframes introPeach {
+  0%, 100% { background-color: #ffdab9; }
+  25% { background-color: #ffe4b5; }
+  50% { background-color: #ffdab9; }
+  75% { background-color: #ffefd5; }
+}
+
+/* bulbs */
+.intro-bulbs {
+  position: absolute; top: calc(env(safe-area-inset-top, 0px) + 14px); left: 0; right: 0;
+  display: flex; justify-content: space-around; padding: 0 4vw; z-index: 2;
+}
+.intro-bulb {
+  width: clamp(34px, 9vw, 52px); aspect-ratio: 1;
+  background: url('assets/intro/bulb.png') center / contain no-repeat;
+  opacity: .35;
+}
+.intro-bulb.on { opacity: 1; animation: bulbOn 1.2s ease-out both; animation-delay: var(--d, 0s); }
+.intro-bulb.on.yellow { background-image: url('assets/intro/bulb_yellow.png'); filter: drop-shadow(0 0 14px #ffd23f); }
+.intro-bulb.on.red    { background-image: url('assets/intro/bulb_red.png');    filter: drop-shadow(0 0 14px #ff4d3d); }
+.intro-bulb.on.blue   { background-image: url('assets/intro/bulb_blue.png');   filter: drop-shadow(0 0 14px #3d7bff); }
+.intro-bulb.on.green  { background-image: url('assets/intro/bulb_green.png');  filter: drop-shadow(0 0 14px #44d36a); }
+.intro-bulb.on.pink   { background-image: url('assets/intro/bulb_pink.png');   filter: drop-shadow(0 0 14px #ff5fa8); }
+.intro-bulb.on.orange { background-image: url('assets/intro/bulb_orange.png'); filter: drop-shadow(0 0 14px #ff9a2e); }
+@keyframes bulbOn { 0% { opacity: .35; } 60% { opacity: 1; } 100% { opacity: 1; } }
+
+/* banner drops from the top */
+.intro-banner {
+  position: absolute; top: calc(env(safe-area-inset-top, 0px) + 78px); left: 50%;
+  width: min(92vw, 470px);
+  transform: translate(-50%, -260%);
+  transition: transform 3.2s cubic-bezier(.22, 1.2, .36, 1);
+  z-index: 3;
+}
+.intro-banner.come { transform: translate(-50%, 0); }
+
+/* balloons */
+.intro-balloon {
+  position: absolute; left: 0; bottom: -220px;
+  width: clamp(62px, 17vw, 100px); aspect-ratio: 100 / 183;
+  background-size: 100% 100%; background-repeat: no-repeat;
+  opacity: .92; z-index: 4;
+  transition: left 9s linear, bottom 9s linear;
+  pointer-events: none;
+}
+.intro-balloon::after { /* sway */
+  content: ''; position: absolute; inset: 0; background: inherit;
+  animation: balloonSway var(--sw, 3.5s) ease-in-out infinite alternate;
+  transform-origin: 50% 100%;
+}
+.intro-balloon { background-image: none !important; }
+.intro-balloon::after {
+  background-image: var(--img);
+  content: attr(data-label); /* balloon par naam/msg: index.html me data-label="..." likho */
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  padding: 0 10% 32% 10%; box-sizing: border-box;
+  font-weight: 700; font-family: 'Fredoka', sans-serif; line-height: 1.1;
+  font-size: var(--fs, clamp(11px, 3.2vw, 15px));
+  color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,.55);
+  word-break: break-word;
+}
+@keyframes balloonSway { from { transform: rotate(calc(var(--amp, 14deg) * -1)); } to { transform: rotate(var(--amp, 14deg)); } }
+
+/* control buttons */
+.intro-controls {
+  position: absolute; left: 0; right: 0; z-index: 10; text-align: center;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 28px);
+}
+.intro-btn {
+  display: none; border: 0; cursor: pointer; color: #fff;
+  font: 700 clamp(16px, 4.6vw, 20px) 'Fredoka', sans-serif; letter-spacing: .3px;
+  padding: 13px 30px; border-radius: 999px;
+  background: linear-gradient(135deg, #ff5fa8, #ff3d7f);
+  box-shadow: 0 8px 22px rgba(255, 61, 127, .45), inset 0 -3px 0 rgba(0,0,0,.15);
+  transition: transform .15s;
+}
+.intro-btn:active { transform: scale(.95); }
+.intro-btn.show { display: inline-block; animation: introBtnIn .7s ease both; }
+@keyframes introBtnIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+/* sound toggle (stays after the intro) */
+#sound-toggle {
+  position: fixed; bottom: calc(env(safe-area-inset-bottom, 0px) + 12px); right: 12px; z-index: 600;
+  width: 38px; height: 38px; border-radius: 50%; border: 0; cursor: pointer; padding: 0;
+  background: rgba(0, 0, 0, .4); color: #fff; font-size: 18px; line-height: 38px;
+  display: none; backdrop-filter: blur(4px);
+}
+#sound-toggle.show { display: block; }
