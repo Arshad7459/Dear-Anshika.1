@@ -466,15 +466,15 @@ const LETTER_SECTIONS = [
   },
   {
     id: 'letter-p1-el',
-    text: "Dear Anshika mai ye letter aaj 09-11-2026 ko  likh raha hun aur mujhe nhi ptaa mai tumhare sath hun ya nhi hamari baat ho rahi hai ya nhi aur aaj se pehle mujhe is 2 December ke aane se koi khushi nhi ye din bhi ek normal din he thaa prr jab se mai tumse mila hun aur mujhe ptaa chal hai is din tumhara birthday hai ye din mere liye bahut bahut special hai ku ki is din mere ek favourite person ka birthday hai aisa person jo bahut cute hai thodi si bacchi hai  thodi si sararti hai prr uska dil diamond se kai guna jyada axa hai and i wish is din tumhe der saari khushiyan mile i pray to god for your better health & welth HAPPY BIRTHDAY MY DEAR aur sun rone mat lagna warna bahut marunga samjhi HAPPY BIRTHDAY DEAR ❤️ . 🥺💖"
+    text: "Dear Anshika aaj se pehle mujhe is 2 December ke aane se koi khushi nhi ye din bhi ek normal din he thaa prr jab se mai tumse mila hun aur mujhe ptaa chal hai is din tumhara birthday hai ye din mere liye bahut bahut special hai ku ki is din mere ek favourite person ka birthday hai aisa person jo bahut cute hai thodi si bacchi hai  thodi si sararti hai prr uska dil diamond se kai guna jyada axa hai and i wish is din tumhe der saari khushiyan mile i pray to god for your better health & welth HAPPY BIRTHDAY MY DEAR and Thanku so much  for mera itna khayal rakhne ke liye itna care karne ke liye  . 🫶🏻🎂❤️ HAPPY BIRTHDAY DEAR ❤️ . 🥺💖"
   },
   {
     id: 'letter-p2-el',
-    text: "I'm so lucky to have you, and I can't wait to make a million more memories with you. Here's to you, your dreams, and all the happiness you deserve."
+    text: "Aaj ka mera pura din sirf tumhare liye haiMeri dua hai ki tumhari har wish poori ho, tumhare saare sapne sach hon, aur tumhari smile hamesha aisi hi bani rahe. Tum sab kuch deserve karti ho."
   },
   {
     id: 'letter-closing-el',
-    text: "Happy birthday, my love. I love you more than you know. 🫶🏻🎂❤️"
+    text: "aur sun rone mat lagna warna bahut marunga samjhi chalo ab ek pyari si smile deke celebreate karoo . 🫶🏻🎂❤️"
   }
 ];
 
