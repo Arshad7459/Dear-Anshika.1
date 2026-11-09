@@ -78,15 +78,13 @@ const MASS_BALLOONS = 60;        // ek saath udne wale balloons ki ginti
       b.style.setProperty('--sw', (2.5 + Math.random() * 2) + 's');
       list.push(b);
     }
-    flush(() => list.forEach(b => {
+         flush(() => list.forEach(b => {
       const dur = 6 + Math.random() * 4, delay = Math.random() * 3;
       const x = Math.max(0, Math.min(w - 80, parseFloat(b.style.left) + (Math.random() - 0.5) * 160));
-      b.style.transition = 'bottom ' + dur + 's ' + delay + 's cubic-bezier(.25,.1,.4,1), left ' + dur + 's ' + delay + 's ease-in-out';
-      b.style.bottom = (h + 320) + 'px';
-      b.style.left = x + 'px';
+      const dx = x - parseFloat(b.style.left);
+      b.style.transition = 'transform ' + dur + 's ' + delay + 's cubic-bezier(.25,.1,.4,1)';
+      b.style.transform = 'translate3d(' + dx + 'px,' + (-(h + 620)) + 'px,0)';
     }));
-    setTimeout(() => list.forEach(b => b.remove()), 14500);
-  }
 
   // (b) naam wale balloons: har letter ek balloon, upar jaakar ruk jaate hain
   function nameBalloons() {
