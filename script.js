@@ -466,7 +466,7 @@ const LETTER_SECTIONS = [
   },
   {
     id: 'letter-p1-el',
-    text: "I hope this year brings you everything you've been wishing for and so much more. Thank you for making my days happier, my bad days easier, and my life a little more beautiful just by being in it. 🥺💖"
+    text: "Dear Anshika mai ye letter aaj 09-11-2026 ko  likh raha hun aur mujhe nhi ptaa mai tumhare sath hun ya nhi hamari baat ho rahi hai ya nhi aur aaj se pehle mujhe is 2 December ke aane se koi khushi nhi ye din bhi ek normal din he thaa prr jab se mai tumse mila hun aur mujhe ptaa chal hai is din tumhara birthday hai ye din mere liye bahut bahut special hai ku ki is din mere ek favourite person ka birthday hai aisa person jo bahut cute hai thodi si bacchi hai  thodi si sararti hai prr uska dil diamond se kai guna jyada axa hai and i wish is din tumhe der saari khushiyan mile i pray to god for your better health & welth HAPPY BIRTHDAY MY DEAR aur sun rone mat lagna warna bahut marunga samjhi HAPPY BIRTHDAY DEAR ❤️ . 🥺💖"
   },
   {
     id: 'letter-p2-el',
