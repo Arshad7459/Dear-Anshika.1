@@ -2,7 +2,7 @@
    After the last button the original Shinchan experience (midnight countdown → passcode → gifts) starts. */
 // ═══════ SETTINGS (yahan badlo) ═══════
 const BALLOON_NAME = 'ANSHIKA';   // naam jo balloons banayenge; do words ho to do rows, jaise 'ANYA SHARMA'
-const MASS_BALLOONS = 36;        // ek saath udne wale balloons ki ginti
+const MASS_BALLOONS = 60;        // ek saath udne wale balloons ki ginti
 // ═══════════════════════════════════════
 
 (function () {
