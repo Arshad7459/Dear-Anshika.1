@@ -470,7 +470,7 @@ const LETTER_SECTIONS = [
   },
   {
     id: 'letter-p2-el',
-    text: "Aaj ka mera pura din sirf tumhare liye haiMeri dua hai ki tumhari har wish poori ho, tumhare saare sapne sach hon, aur tumhari smile hamesha aisi hi bani rahe. Tum sab kuch deserve karti ho."
+    text: "Aaj ka mera pura din sirf tumhare liye hai Meri dua hai ki tumhari har wish poori ho, tumhare saare sapne sach hon, aur tumhari smile hamesha aisi hi bani rahe. Tum sab kuch deserve karti ho."
   },
   {
     id: 'letter-closing-el',
